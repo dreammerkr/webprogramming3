@@ -1,0 +1,22 @@
+<%= link_to 'Back', comics_path %>
+
+<% if @comic.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@comic.errors.count, "error") %> prohibited this article from being saved:
+        </h2>
+        <ul>
+            <% @comic.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_tag comics_path , method:'post', multipart: true do %>
+    <input type="text" name="title"><br>
+    <input type="file" name="image"><br>
+    <input type="textarea" name="content"><br>
+    <input type="submit">
+<% end %>
+

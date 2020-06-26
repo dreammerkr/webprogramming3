@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  color: #aeaeae;
+}
+
+body {
+  background-color: #333333;
+}
+
+#image {
+  position:relative;
+	padding:10px;
+	background:#666666;
+  height: 400px;
+	float:left;
+}
+
+#data {
+  position:relative;
+	padding:10px;
+	background: #999999;
+	font-size:12px;
+	font-family:Verdana;
+	color:#FFFFFF;
+  width: 200px;
+  height: 400px;
+	float:left;
+}
+
+p {
+  text-align: right;
+  color : violet
+}

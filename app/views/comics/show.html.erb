@@ -1,0 +1,12 @@
+<p><%= link_to 'New Comic', new_comic_path %></p>
+<title>겁쟁이 페달</title>
+<h1>Title:</h1>
+<h1><%= @comic.title %></h1>
+
+<div id="image">
+    <img src="<%=@comic.image.url%>">
+</div>
+<div id="data">
+    <strong>Text:</strong>
+    <%= @comic.content %>
+</div>

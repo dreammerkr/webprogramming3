@@ -1,0 +1,24 @@
+<%= link_to 'New Comic', new_comic_path %>
+
+<h1>
+    What cartoons I have seen?
+</h1>
+<body>
+    <div id="table-name">
+        <h2>
+          Lists of cartoons
+        </h2>
+     </div>
+    <ol>
+        <% @comics.each do |p| %>
+        <li>
+            <%=p.title%>
+            <%= link_to 'Show', comic_path(p) %>
+            <%= link_to 'Edit', edit_comic_path(p) %>
+            <td><%= link_to 'Destroy', comic_path(p),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+        </li>
+        <% end %>
+    </ol>
+</body>
